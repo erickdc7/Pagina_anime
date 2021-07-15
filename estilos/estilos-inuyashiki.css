@@ -1,0 +1,398 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+:root {
+    --oscuro: #131313;
+    --claro: #fff;
+    --flechaHover: #242424;
+    --flechaActive: #131313;
+    --varLineNav: #ffff00;
+}
+
+body {
+    background-color: var(--oscuro);
+    color: var(--claro);
+    font-family: 'Rosario', sans-serif;
+}
+header {
+    padding: 7px 0 0 0;
+}
+p {
+    font-size: 17px;
+}
+h1 {
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 50px;
+}
+h5 {
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 12px;
+}
+h6 {
+    margin-bottom: 7px;
+}
+nav {
+    text-align: center;
+    /*background-color: tomato;*/
+    width: 90%;
+    margin: 0 auto;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+
+    display: flex;
+    justify-content: space-around;
+}
+li {
+    float: left; 
+    list-style: none;
+}
+a {
+    display: block;
+    padding: 7px 5px;
+    text-decoration: none;
+    color: var(--claro);
+    
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+/* MENUS NAV*/
+.menus {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    position: relative;
+    overflow: hidden;
+  }
+.menus:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: var(--varLineNav);
+    height: 3px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.menus:hover:before, 
+.menus:focus:before, 
+.menus:active:before {
+    left: 0;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1200px; 
+    grid-template-rows: 430px 160px; /* 590 */
+    grid-row-gap: 10px;
+    justify-content: center;
+
+    /*background-color: rgb(114, 92, 59); */
+    padding: 10px;
+    width: 90%;
+    margin: 14px auto 0px auto;
+}
+
+.grid-item {
+    display: grid;
+    grid-template-columns: 284px 890px; /* max-width: 1200px; */
+    grid-template-rows: 150px 243px; /* 403 tamaño imagen */
+    grid-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    
+    /*background-color: rgb(54, 57, 63); */
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+/* CUADRO DONDE ESTA LA IMAGEN DE PORTADA */
+.grid-item-info-1 {
+    grid-row: 1 / 3;
+
+    /*background-color: rgb(245, 6, 6);*/
+    color: var(--claro);
+    text-align: center;
+}
+/* IMAGEN PORTADA DEL ANIME  */
+.grid-item-info-1 img{
+    width: 284px;
+    height: 403px;
+}
+/* CUADRO DONDE ESTA INFO Y SINOPSIS */
+.grid-item-info {
+    /*background-color: rgb(31, 110, 84);*/
+    color: var(--claro);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CUADROS DE TEXTO DONDE ESTA INFO Y SINOPSIS */
+.p-left {
+    text-align: right;
+    display: inline-block;
+
+    /*background-color: rgb(23, 53, 43);*/
+    width: 20%;
+    height: 100%;
+    padding: 25px 0 0 0;
+}
+.p-right {
+    text-align: left;
+    display: inline-block;
+
+    /*background-color: rgb(23, 53, 43);*/
+    width: 50%;
+    height: 100%;
+    padding: 25px 0 0 0;
+}
+
+
+/* CUADRO SINOPSIS */
+.grid-item-info-sinopsis {
+    text-align: left;
+    /*background-color: rgb(31, 110, 84);*/
+    color: var(--claro);
+    padding: 0 15px;
+}
+
+
+
+
+
+/* CAJA DONDE ESTAN LOS LINKS */
+.grid-item-links{
+    /*background-color: rgb(31, 110, 84);*/
+    color: var(--claro);
+    text-align: left;
+    padding: 20px 0 0 20px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* LOGO-CRUNCHYROLL */
+.link1 img {
+    position: absolute;
+    width: 6%;
+    left: 210px;
+    top: 630px;
+}
+
+/* LOGO-ANIMEFLV */
+.link2 img {
+    position: absolute;
+    width: 10%;
+    left: 400px;
+    top: 590px;
+}
+
+/* LOGO-JKANIME */
+.link3 img {
+    position: absolute;
+    width: 12%;
+    left: 345px;
+    top: 670px;
+}
+
+/* LOGO-ANIMEID */
+.link4 img {
+    position: absolute;
+    width: 12%;
+    left: 570px;
+    top: 630px;
+}
+
+/* LOGO-ANIMEFENIX */
+.link5 img {
+    position: absolute;
+    width: 9%;
+    left: 760px;
+    top: 590px;
+}
+
+/* LOGO-OTAKUSTV */
+.link6 img {
+    position: absolute;
+    width: 14%;
+    left: 970px;
+    top: 590px;
+}
+
+/* LOGO-MONOSCHINOS */
+.link7 img {
+    position: absolute;
+    width: 14%;
+    left: 910px;
+    top: 650px;
+}
+
+/* LOGO-ANIMEBLIX */
+.link8 img {
+    position: absolute;
+    width: 13%;
+    left: 1150px;
+    top: 640px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    FLECHAS DERECHA - IZQUIERDA
+*/
+
+.left, .right {
+    color: var(--claro);
+    font-size: 35px; 
+    left: 1440px;
+    top: 200px;
+    text-align: center;
+}
+
+.circulo-right {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 1440px;
+    top: 395px;
+    border-radius: 50%;
+    background-color: transparent;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo-left {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50px;
+    top: 395px;
+    border-radius: 50%;
+    background-color: transparent;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo-left a,
+.circulo-right a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo-left a:hover,
+.circulo-right a:hover{
+    background-color: var(--flechaHover);
+    border-radius: 50%;
+}
+
+.circulo-left a:active,
+.circulo-right a:active{
+    background-color: var(--flechaActive);
+    border-radius: 50%;
+} 
